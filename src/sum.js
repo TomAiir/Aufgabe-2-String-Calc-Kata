@@ -4,7 +4,7 @@ function stringCalculator(numbers) {
         return 0;
     }
 
-    var splitString = /[,]/;
+    var splitString = /[,\n]+/;
 
     if (splitString.test(numbers)) {
         var result = 0;
