@@ -71,7 +71,7 @@ it('should return an error "Negatives not allowed: -1000"', () => {
 
 it('should return an error "Negatives not allowed: -720"', () => {
     function tryStringCalculator () {
-        stringCalculator("//;/n1;10,-720")
+        stringCalculator("//;/n1;10,-720, 1111")
         expect(stringCalculator.toThrowError("Negatives not allowed: -720"))
     }
 });
