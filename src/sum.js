@@ -1,21 +1,23 @@
-function stringCalculator(number){
+function stringCalculator(numbers) {
 
-    if(number === ' '){
+    if (numbers === ' ') {
         return 0;
     }
-    var input = String(number);
-    var splitString =  input.split(',');
 
-    if (splitString.length > 1) {
-        var result = parseInt(splitString[0]) + parseInt(splitString[1]);
+    var splitString = /[,]/;
+
+    if (splitString.test(numbers)) {
+        var result = 0;
+
+        numbers = numbers.split(splitString);
+        for (var i = 0; i < numbers.length; i++) {
+            result += parseInt(numbers[i]);
+        }
+
         return result;
     }
-    else {
-        var result = parseInt(splitString[0]);
-        return result;
-    }
-    
+
+    return parseInt(numbers);
 }
 
-const sum = stringCalculator();
-module.exports =  stringCalculator ;
+module.exports = stringCalculator;
