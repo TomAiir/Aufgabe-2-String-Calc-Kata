@@ -15,19 +15,10 @@ function stringCalculator(numbers){
         errorString = errorString.slice(0, errorString.length - 2);
         throw errorString;
     }
-
-    var maxSplitString = /\d\d\d\d\d*/g
-    numbers = numbers.replace(maxSplitString, "0");
-
+    
     var splitString = /[,\n]+/;
     
-	if(numbers.includes("//")){
-		var inputDelimiter = /..(.+).n(.*)/g; // g = perform global match , "+" = at least one n , "*" = zero or more occurrences of n
-		var CaptureGroup = inputDelimiter.exec(numbers);
-		var newSplit = CaptureGroup[1]; 
-		splitString = new RegExp('[,//n' + newSplit + ']' ); // Regular Expression = Search Patterns
-		numbers = CaptureGroup[2]; 
-    }
+	
     
 	if( splitString.test(numbers) ){ 
 		var totalSum = 0;
