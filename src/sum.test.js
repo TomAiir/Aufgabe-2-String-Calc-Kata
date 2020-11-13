@@ -1,7 +1,5 @@
 const stringCalculator = require('./sum');
 
-
-
 it('should return 720', () => {
     expect(stringCalculator("720")).toBe(720);
 });

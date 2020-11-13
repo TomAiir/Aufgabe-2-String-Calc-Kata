@@ -5,7 +5,6 @@ function stringCalculator(numbers){
 		return 0;
 	}
 
-	
     var splitString = /[,\n]+/;
     
 	if(numbers.includes("//")){
@@ -16,7 +15,6 @@ function stringCalculator(numbers){
 		numbers = CaptureGroup[2]; 
     }
     
-
 	if( splitString.test(numbers) ){ 
 		var totalSum = 0;
 		
