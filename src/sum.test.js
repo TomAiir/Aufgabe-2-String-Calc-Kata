@@ -40,16 +40,38 @@ it('should add //,/n700,20 to return 720', () => {
     expect(stringCalculator("//,/n700,20")).toBe(720);
 });
 
-it("should return an error 'Negatives not allowed!: -1)'", () => {
+it('should return an error "Negatives not allowed!: -1)"', () => {
     function tryStringCalculator () {
         stringCalculator("-1,2");
     }
     expect(tryStringCalculator).toThrowError("Negatives not allowed: -1");
 });
 
-it("should return an error 'Negatives not allowed!: -1, -3)'", () => {
+it('should return an error "Negatives not allowed!: -1, -3)"', () => {
     function tryStringCalculator () {
         stringCalculator("-1,2,-3");
     }
     expect(tryStringCalculator).toThrowError("Negatives not allowed: -1, -3");
+});
+
+it('should add 1 and 1000 to return 1', () =>{
+    expect(stringCalculator("2,1001")).toBe(2);
+});
+
+it('should add 999, \n1 and 1000 to return 1000', () =>{
+    expect(stringCalculator("999,\n1,1000")).toBe(1000);
+});
+
+it('should return an error "Negatives not allowed: -1000"', () => {
+    function tryStringCalculator () {
+        stringCalculator("1,-10;-1000");
+    }
+    expect(tryStringCalculator).toThrowError("Negatives not allowed: -10")
+});
+
+it('should return an error "Negatives not allowed: -720"', () => {
+    function tryStringCalculator () {
+        stringCalculator("//;/n1;10,-720")
+        expect(stringCalculator.toThrowError("Negatives not allowed: -720"))
+    }
 });

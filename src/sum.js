@@ -16,6 +16,9 @@ function stringCalculator(numbers){
         throw errorString;
     }
 
+    var maxSplitString = /\d\d\d\d\d*/g
+    numbers = numbers.replace(maxSplitString, "0");
+
     var splitString = /[,\n]+/;
     
 	if(numbers.includes("//")){
