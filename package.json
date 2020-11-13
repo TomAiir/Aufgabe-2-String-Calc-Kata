@@ -1,0 +1,26 @@
+{
+  "name": "Aufgabe-2-String-Calc-Kata",
+  "version": "1.0.0",
+  "description": "",
+  "main": "node sum.js",
+  "scripts": {
+    "start": "node sum.js",
+    "test": "jest",
+    "watch": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TomAiir/Aufgabe-2-String-Calc-Kata.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TomAiir/Aufgabe-2-String-Calc-Kata/issues"
+  },
+  "homepage": "https://github.com/TomAiir/Aufgabe-2-String-Calc-Kata#readme",
+  "dependencies": {
+    "jest": "^26.6.3",
+    "jquery": "^3.5.1"
+  }
+}
