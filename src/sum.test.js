@@ -1,8 +1,6 @@
 const stringCalculator = require('./sum');
 
-it('should return 0', () => {
-    expect(stringCalculator(" ")).toBe(0);
-});
+
 
 it('should return 720', () => {
     expect(stringCalculator("720")).toBe(720);
@@ -34,4 +32,12 @@ it('should add 1, 2, \n3 to return 6', () => {
 
 it('should add 1, 2, \n3, 4, \n5, 6, \n7 to return 28', () => {
     expect(stringCalculator("1,2,\n3,4,\n5,6,\n7")).toBe(28);
+});
+
+it('should add //;/n1;2,3 to return 6', () => {
+    expect(stringCalculator("//;/n1;2,3")).toBe(6);
+});
+
+it('should add //,/n700,20 to return 720', () => {
+    expect(stringCalculator("//,/n700,20")).toBe(720);
 });
