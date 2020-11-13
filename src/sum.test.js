@@ -39,3 +39,17 @@ it('should add //;/n1;2,3 to return 6', () => {
 it('should add //,/n700,20 to return 720', () => {
     expect(stringCalculator("//,/n700,20")).toBe(720);
 });
+
+it("should return an error 'Negatives not allowed!: -1)'", () => {
+    function tryStringCalculator () {
+        stringCalculator("-1,2");
+    }
+    expect(tryStringCalculator).toThrowError("Negatives not allowed: -1");
+});
+
+it("should return an error 'Negatives not allowed!: -1, -3)'", () => {
+    function tryStringCalculator () {
+        stringCalculator("-1,2,-3");
+    }
+    expect(tryStringCalculator).toThrowError("Negatives not allowed: -1, -3");
+});
